@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+  <html>
+	<head>
+		<title>Calculadora com Vue</title>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "style.css"/>
+	</head>
+
+  <body>
+
+    <div id = "app">
+      <!-- tela resultado -->
+      <section class = "r_display">
+        <span v-if = "temporario === '' ">{{ resultado }}</span>
+        <span v-else>{{ temporario }}</span>
+      </section>
+      
+      <!-- primeira linha -->
+      <div class = "botoes">
+        <button v-on:click = "imprime('c')" class = "btn" id = "c">C</button>
+        <button v-on:click = "imprime('/')" class = "btn" id = "divi">/</button>
+        <button v-on:click = "imprime('*')" class = "btn" id = "mult">X</button>
+        <button v-on:click = "imprime('7')" class = "btn" id = "sete">7</button>
+        <button v-on:click = "imprime('8')" class = "btn" id = "oito">8</button>
+        <button v-on:click = "imprime('9')" class = "btn" id = "nove">9</button>
+        <button v-on:click = "imprime('-')" class = "btn" id = "sub">-</button>
+        <button v-on:click = "imprime('4')" class = "btn" id = "quatro">4</button>
+        <button v-on:click = "imprime('5')" class = "btn" id = "cinco">5</button>
+        <button v-on:click = "imprime('6')" class = "btn" id = "seis">6</button>
+        <button v-on:click = "imprime('+')" class = "btn" id = "soma">+</button>
+        <button v-on:click = "imprime('1')" class = "btn" id = "um">1</button>
+        <button v-on:click = "imprime('2')" class = "btn" id = "dois">2</button>
+        <button v-on:click = "imprime('3')" class = "btn" id = "tres">3</button>
+        <button v-on:click = "imprime('=')" class = "btn" id = "igual">=</button>
+        <button v-on:click = "imprime('0')" class = "btn" id = "zero">0</button>
+        <button v-on:click = "imprime('.')" class = "btn" id = "ponto">.</button>
+      </div>
+    </div>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+    <script src = "script.js"></script>
+  </body>	
+</html>
