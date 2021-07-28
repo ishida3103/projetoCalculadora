@@ -108,7 +108,7 @@ new Vue({
                     }else{
                         return (v1 / v2).toFixed(3)
                     }
-                    break
+                    break;
             }
         }
     }
